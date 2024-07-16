@@ -1,7 +1,17 @@
 .wrap {
     animation: fadein 3s forwards;
   }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
   
+
   @keyframes fadein {
     0% {opacity: 0}
     100% {opacity: 1}
@@ -15,5 +25,20 @@
   
   body {
     margin: 0;
-    font-size: 20px;
   }
+
+  .text-container {
+    margin-top: 60px; /* ヘッダーの高さに合わせて調整 */
+    max-width: 600px; /* 固定幅を設定 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  .text {
+    font-size: 24px;
+    white-space: pre-wrap; /* 改行を保持 */
+    text-align: left; /* 左寄せに変更 */
+    position: relative;
+    overflow-wrap: break-word;
+}
+
