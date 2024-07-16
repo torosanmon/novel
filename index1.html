@@ -8,29 +8,46 @@
     <style>
         
         body {
-            margin: 0;
-            padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: black;
             color: white;
             font-family: Arial, serif;
             text-align: left; /* テキストを左寄せに */
-        }
-        /* #content {
-            width: 80%;
-            max-width: 800px;
+            white-space: pre-wrap; /* 改行を保持 */
+            position: relative;
+            overflow-wrap: break-word;
+            font-family: 'Times New Roman', serif; /* 明朝体に変更 */
             padding: 20px;
-            border: 1px solid white;
-            cursor: pointer;
-        } */
+            margin: 0;
+        }
+
+        
+
+        .text-container {
+            margin-top: 60px; /* ヘッダーの高さに合わせて調整 */
+            max-width: 600px; /* 固定幅を設定 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text {
+            font-size: 24px;
+            white-space: pre-wrap; /* 改行を保持 */
+            text-align: left; /* 左寄せに変更 */
+            position: relative;
+            overflow-wrap: break-word; /* 単語の途中で改行 */
+        }
+
     </style>
 </head>
+
 <body>
+   
+        <div class="fixed-header">クリックorエンターキーでページ送り</div>
+     
     <div class="wrap">
-    <div id="content">
+    <div id="content" class="text-container">
         <div id="text"></div>
     </div>
 </div>
